@@ -1,0 +1,16 @@
+<div class="p-5">
+<div class="text-2xl text-center">
+<h> Projects :</h>
+<br>
+   
+<%@projects.each do |project|%>
+    <span class="p-3 mt-2 bg-light-gray"> <b><%=project.title%></b> <br>
+    <%= link_to "Edit", edit_project_path(id:project.id) ,class:"text-sm text-white btn btn-success" %>
+    <%=link_to "View Project Todos" , project_todos_path(project_id:project.id),class:"text-sm text-white btn btn-warning" %>
+    <%= button_to "delete",  project, method: "delete" ,class: "text-sm text-white btn btn-danger mt-1" %>
+
+    </span>
+
+<%end%>
+</div>
+</div>

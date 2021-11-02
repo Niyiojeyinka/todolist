@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+ firstProject = Project.create({
+     title: "New Facebook Name Change Update",
+     status: "pending"
+ });
+
+ todos= Todo.create([
+     {
+         title: "Change DNS Setting",
+         project_id: firstProject.id,
+     },
+         {
+         title: "Show maintainance Screen",
+         project_id: firstProject.id,
+     },
+         {
+         title: "Distrupt worldwide communication", 
+         project_id: firstProject.id,
+     }
+ ])

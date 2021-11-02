@@ -1,0 +1,10 @@
+<div class="p-5">
+<div class="my-5">
+<%= link_to "Add New Todo" ,add_todo_to_project_path(project_id: params[:project_id]),class: "text-primary right" %>
+</div>
+<br>
+
+<% @todos.each do |todo| %>
+    <span class="p-3 my-2"><%= "#{todo.title} #{todo.status} " %><span><br>
+<%end%>
+</div>
